@@ -87,8 +87,8 @@ func randPoints(f func(float64) float64, inputPointsMinY, inputPointsMaxY float6
 }
 
 func main() {
-	// ebiten.SetWindowSize(640, 480)
-	// ebiten.SetWindowTitle("Gradient descent")
+	ebiten.SetWindowSize(screenWidth, screenHeight)
+	ebiten.SetWindowTitle("Gradient descent")
 
 	img := make(chan *image.RGBA, 1)
 	inputs, labels := randPoints(f, inputPointsMinY, inputPointsMaxY, inputPoints)
